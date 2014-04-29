@@ -11,7 +11,7 @@ npm install express-co
 ## Usage
 
 ```javascript
-var express = require('co-express')(require('express'));
+var express = require('express-co')(require('express'));
 
 var app = express();
 
