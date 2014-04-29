@@ -1,0 +1,26 @@
+{
+  "name": "express-co",
+  "description": "Use generators with express",
+  "version": "0.4.0",
+  "license": "MIT",
+  "main": "index",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/qard/express-co"
+  },
+  "engines": {
+    "node": ">=v0.11.4"
+  },
+  "author": "Stephen Belanger <admin@stephenbelanger.com>",
+  "keywords": [
+    "express",
+    "generator",
+    "harmony",
+    "koa",
+    "co"
+  ],
+  "dependencies": {
+    "co": "3.0.x",
+    "methods": "0.1.x"
+  }
+}
