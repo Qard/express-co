@@ -1,4 +1,4 @@
-# express-generators
+# express-generators [![Build Status](https://travis-ci.org/floatdrop/express-generators.svg?branch=master)](https://travis-ci.org/floatdrop/express-generators)
 
 Use generators with Express.
 
