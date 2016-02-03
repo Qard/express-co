@@ -46,7 +46,7 @@ function wrapParamMethod(route) {
 
 		if (isGenerator(fn)) {
 			cb = function (req, res, next, id) {
-				co.wrap(fn).call(this, req, res, id).then(next, next);
+				co.wrap(fn).call(this, req, res, id).then(() => !res.finished && next(), next);
 			};
 		}
 
@@ -60,6 +60,6 @@ function convertGenerators(v) {
 	}
 
 	return function (req, res, next) {
-		co.wrap(v).call(this, req, res).then(next, next);
+		co.wrap(v).call(this, req, res).then(() => !res.finished && next(), next);
 	};
 }
