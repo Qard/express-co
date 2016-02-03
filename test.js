@@ -58,6 +58,20 @@ it('should pass throwed exception to error handler', function (done) {
 	request(app).get('/').expect(500, done);
 });
 
+it('should work with param method', function (done) {
+	var app = expressCo();
+
+	app.param('user', function* (req, res, id) {
+		assert.equal(id, 42);
+	});
+
+	app.get('/:user', function* (req, res) {
+		res.send('meh');
+	});
+
+	request(app).get('/42').expect(200, done);
+});
+
 it('should accept old function as middleware', function (done) {
 	var app = expressCo();
 

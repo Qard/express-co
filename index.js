@@ -44,7 +44,7 @@ function wrapParamMethod(route) {
 	return function (name, fn) {
 		var cb = fn;
 
-		if (isGenerator(fn)) {
+		if (isGenerator.fn(fn)) {
 			cb = function (req, res, next, id) {
 				co.wrap(fn).call(this, req, res, id).then(() => !res.finished && next(), next);
 			};
