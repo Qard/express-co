@@ -40,6 +40,24 @@ it('should not call next middleware after res.send', function (done) {
 		});
 });
 
+it('should pass throwed exception to error handler', function (done) {
+	var app = expressCo();
+
+	app.get('/', function* () {
+		throw new Error('Bang!');
+	});
+
+	/* eslint-disable no-unused-vars */
+	app.use(function (err, req, res, next) {
+		assert.equal(err.message, 'Bang!');
+		res.sendStatus(500);
+		next();
+	});
+	/* eslint-enable no-unused-vars */
+
+	request(app).get('/').expect(500, done);
+});
+
 it('should accept old function as middleware', function (done) {
 	var app = expressCo();
 
