@@ -1,12 +1,12 @@
 {
-  "name": "express-co",
+  "name": "express-generators",
   "description": "Use generators with express",
   "version": "0.4.0",
   "license": "MIT",
   "main": "index",
   "repository": {
     "type": "git",
-    "url": "git://github.com/qard/express-co"
+    "url": "git://github.com/floatdrop/express-generators"
   },
   "scripts": {
     "test": "xo && mocha -R spec"
@@ -14,7 +14,7 @@
   "engines": {
     "node": ">=4"
   },
-  "author": "Stephen Belanger <admin@stephenbelanger.com>",
+  "author": "Vsevolod Strukchinsky <floatdrop@gmail.com>",
   "keywords": [
     "express",
     "generator",
