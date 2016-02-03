@@ -11,17 +11,17 @@ npm install express-co
 ## Usage
 
 ```javascript
-var express = require('express-co')(require('express'))
-var User = require('./models/user')
+const express = require('express-co')(require('express'));
+const User = require('./models/user');
 
-var app = express()
+const app = express();
 
 app.get('/user/:id', function* (req, res) {
-    var user = yield User.findById(req.params.id)
-    res.send(user)
-})
+    const user = yield User.findById(req.params.id);
+    res.send(user);
+});
 
-app.listen(8000)
+app.listen(8000);
 ```
 
 ## Notes
