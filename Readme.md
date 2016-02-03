@@ -1,6 +1,6 @@
 # express-co
 
-express-co lets you use generators with express, like koa. I've tested it manually with both express 3 and 4. Proper tests are coming soon.
+express-co lets you use generators with express.
 
 ## Installation
 
@@ -17,8 +17,8 @@ var User = require('./models/user')
 var app = express()
 
 app.get('/user/:id', function* (req, res) {
-  var user = yield User.findById(req.params.id)
-  res.send(user)
+    var user = yield User.findById(req.params.id)
+    res.send(user)
 })
 
 app.listen(8000)
