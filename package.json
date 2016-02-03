@@ -20,7 +20,7 @@
     "co"
   ],
   "dependencies": {
-    "co": "3.0.x",
-    "methods": "0.1.x"
+    "co": "^4.6.0",
+    "methods": "^1.1.0"
   }
 }
