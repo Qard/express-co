@@ -1,5 +1,7 @@
 # express-co
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Qard/express-co.svg)](https://greenkeeper.io/)
+
 express-co lets you use generators with express, like koa. I've tested it manually with both express 3 and 4. Proper tests are coming soon.
 
 ## Installation
